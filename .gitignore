@@ -38,7 +38,8 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-share/python-wheels/
+share/
+bin/
 
 # visual studio code
 .DStore
