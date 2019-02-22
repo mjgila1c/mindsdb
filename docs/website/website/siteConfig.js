@@ -9,37 +9,31 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
-const users = [
-  {
-    caption: 'User1',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
-    pinned: true,
-  },
-];
+const users = [];
 
 const siteConfig = {
-  title: 'Mindsdb', // Title for your website.
-  tagline: 'Create AI based apps in a few lines of code',
-  url: 'http://mindsdb.com/', // Your website URL
-  baseUrl: '/', // Base URL for your project */
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
-
-  // Used for publishing and more
-  projectName: 'mindsdb',
-  organizationName: 'mindsdb',
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
-
-  // For no header links in the top nav bar -> headerLinks: [],
+  title: "Mindsdb" /* title for your website */,
+  tagline: "Create AI based apps in a few lines of code",
+  url: "http://mindsdb.com/" /* your website url */,
+  baseUrl: "/" /* base url for your project */,
+  projectName: "mindsdb",
+  organizationName: "Mindsdb",
+  twitter: true,
+  twitterUsername: "Mindsdb",
+  cname: "www.mindsdb.com",
+  //gaTrackingId: '',
+  //ogImage: '',
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {blog: true, label: 'Blog'},
+    {
+      doc: "Installing",
+      label: "Docs"
+    },
+    { page: "help", label: "Support" },
+    { page: "about", label: "About" },
+    {
+      href: "https://github.com/mindsdb/mindsdb/releases",
+      label: "Download"
+    }
   ],
 
   // If you have users set above, you add it here:
