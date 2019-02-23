@@ -1,10 +1,4 @@
-[<Back to Table of Contents](../README.md)
-
-* [Installing MindsDB on your environment](Installing.md#installing-mindsdb)
-* [Use MindsDB in the cloud with Google Colab](GoogleColab.md)
-
 # Installing MindsDB
-
 
 Before you begin, you need **[python>=3.7](https://realpython.com/installing-python/)** or **[Conda Python3](https://www.anaconda.com/download/)**, and make sure you have the **latest pip3**
 ```bash
