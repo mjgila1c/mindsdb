@@ -49,18 +49,18 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="https://medium.com/mindsdb"
               target="_blank"
               rel="noreferrer noopener">
-              Stack Overflow
+              Medium
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <a href="https://www.facebook.com/MindsDB/"
+              target="_blank">
+              Facebook
+            </a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/mindsdb?lang=en"
               target="_blank"
               rel="noreferrer noopener">
               Twitter
@@ -69,12 +69,12 @@ class Footer extends React.Component {
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
+            <a href="https://github.com/mindsdb/mindsdb">GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
+              data-count-href="/mindsdb/mindsdb/stargazers"
               data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
@@ -84,13 +84,13 @@ class Footer extends React.Component {
         </section>
 
         <a
-          href="https://code.facebook.com/projects/"
+          href="https://github.com/mindsdb/mindsdb"
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
-            src={`${this.props.config.baseUrl}img/oss_logo.png`}
-            alt="Facebook Open Source"
+            src={`${this.props.config.baseUrl}img/favicon/fav.ico`}
+            alt="Mindsdb Open Source"
             width="170"
             height="45"
           />
