@@ -13,6 +13,13 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+const siteConfig = require(process.cwd() + "/siteConfig.js");
+
+function iconUrl(icon) {
+  return siteConfig.baseUrl + "img/icon/" + icon;
+}
+
+
 class HomeSplash extends React.Component {
   render() {
     const {siteConfig, language = ''} = this.props;
@@ -63,9 +70,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+           
           </PromoSection>
         </div>
       </SplashContainer>
@@ -89,33 +94,53 @@ class Index extends React.Component {
           layout={props.layout}
         />
       </Container>
-    );
+    );   
 
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
-    );
-   
-
-    const Features = () => (
-      <Block layout="fourColumn">
+    const Features = props => (
+      <Block layout="threeColumn">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
+            content:
+              "Create and use ML/AI with one line of code.",
+            image: iconUrl("icon1.png"),
+            imageAlign: "top",
+            title: "Simple"
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/docusaurus.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
+            content:
+              "Get not just predictions but also explanations to why such predictions, when you should and should not trust the model and what can you do to improve the quality of your predictions.",
+            image: iconUrl("icon2.png"),
+            imageAlign: "top",
+            title: "Interpretable"
           },
+          {
+            content:
+              "Your data stays where you want it, mindsDB processes data locally as you can install it on your cloud or computer.",
+            image: iconUrl("icon3.png"),
+            imageAlign: "top",
+            title: "Privacy driven"
+          },
+          {
+            content:
+              "MindsDB trains, tests and then selects the most accurate state of the art AI models to apply to your data. Giving you super accurate predictions and forecasting.",
+            image: iconUrl("icon4.png"),
+            imageAlign: "top",
+            title: "Accurate Predictions"
+          },
+          {
+            content:
+              "We can improve the predictive power of your data by enabling the addition of the most reliable third party data from a variety of trusted sources.",
+            image: iconUrl("icon5.png"),
+            imageAlign: "top",
+            title: "Connect External Data"
+          },
+          {
+            content:
+              "Exceptionally easy to use, provide mindsDB access to your data and ask it what you want to forecast, mindsDB takes it from there.",
+            image: iconUrl("icon6.png"),
+            imageAlign: "top",
+            title: "Super ease to use"
+          }
         ]}
       </Block>
     );
@@ -154,7 +179,6 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
           <Showcase />
         </div>
       </div>
