@@ -22,6 +22,7 @@ class Footer extends React.Component {
   }
 
   render() {
+    const currentYear = new Date().getFullYear();
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
@@ -37,14 +38,14 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <a href={this.docUrl('Installing', this.props.language)}>
+              Installing MindsDB
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+            <a href={this.docUrl('BasicExample', this.props.language)}>
+              Learning from Examples
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href={this.docUrl('FAQ', this.props.language)}>
+              Frequently Asked Questions
             </a>
           </div>
           <div>
@@ -83,19 +84,9 @@ class Footer extends React.Component {
           </div>
         </section>
 
-        <a
-          href="https://github.com/mindsdb/mindsdb"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="fbOpenSource">
-          <img
-            src={`${this.props.config.baseUrl}img/favicon/fav.ico`}
-            alt="Mindsdb Open Source"
-            width="170"
-            height="45"
-          />
-        </a>
-        <section className="copyright">{this.props.config.copyright}</section>
+        <section className="copyright">
+          Copyright &copy; {currentYear} <a href="http://mindsdb.com/">Mindsdb</a>
+        </section>
       </footer>
     );
   }
