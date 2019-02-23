@@ -1,7 +1,3 @@
-[<Back to Table of Contents](../README.md)
-
-# FAQ
-
 ### Why MindsDB?
 
 We are building MindsDB, because we want to *Democratize Machine Learning*.
