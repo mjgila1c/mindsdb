@@ -37,7 +37,7 @@ file = "./drive/My Drive/Datasets/StudentsPerformance.csv"
 ## Training
 
 Now let's create a MindsDB object and initialize it with our data from the file. We'll be prediciting the reading_score and we'll call our model 'reading_predictor'.
-Remember that depending on your dataset, these variables might change. Just remember that `predict` is the column you want to make your prediction on and that mindsdb will automatically rename all your collums to snake case.
+Remember that depending on your dataset, these variables might change. Just remember that `predict` is the column you want to make your prediction on and that mindsdb will automatically rename all your columns to snake case.
 ```Python
 mdb = MindsDB()
 
